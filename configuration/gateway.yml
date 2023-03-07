@@ -9,8 +9,8 @@ spring:
       discovery:
         locator:
           enabled: true
-      default-filters:
-        - name: FilterCustom
+#      default-filters:
+#        - name: FilterCustom
       routes:
         - id: msjuego
           uri: lb://juegos-service
