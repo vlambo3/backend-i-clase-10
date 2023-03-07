@@ -11,4 +11,4 @@ spring:
           uri: https://github.com/vlambo3/backend-i-clase-10
           default-label: main
           force-pull: true
-#          search-paths: configuration
+          search-paths: configuration
