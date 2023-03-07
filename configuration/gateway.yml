@@ -1,0 +1,41 @@
+server:
+  port: ${PORT:${SERVER_PORT:8080}}
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      default-filters:
+        - name: FilterCustom
+      routes:
+        - id: msjuego
+          uri: lb://juegos-service
+          predicates:
+            - Path=/juegos/**
+        - id: msbiblioteca
+          uri: lb://biblioteca-service
+          predicates:
+            - Path=/biblioteca/**
+
+info:
+  app:
+    name: ${spring.application.name}
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceURL:
+      defaultZone: http://localhost:8761/eureka
+  management:
+    endpoint:
+      gateway:
+        enabled: true
+    endpoints:
+      web:
+        exposure:
+          include: gateway
