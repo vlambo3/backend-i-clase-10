@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface IBibliotecaService {
 
-    List<Juegos> getJuegoByBiblioteca (String biblioteca);
+//    List<Juegos> getJuegoByBiblioteca (String biblioteca);
 }

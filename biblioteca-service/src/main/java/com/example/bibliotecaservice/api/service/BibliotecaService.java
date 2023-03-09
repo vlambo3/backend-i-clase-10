@@ -14,18 +14,18 @@ import java.util.Objects;
 @Service
 public class BibliotecaService implements IBibliotecaService {
 
-    @Autowired
-    private RestTemplate clienteRest;
-
-    @Override
-    public List<Juegos> getJuegoByBiblioteca(String biblioteca) {
-        var url = String.format("http://localhost:8001/juegos/%s", biblioteca);
-
-        var response = clienteRest.exchange(url, HttpMethod.GET,
-                null,
-                new ParameterizedTypeReference<List<Juegos>>() {
-                });
-
-        return Objects.requireNonNull(response.getBody());
-    }
+//    @Autowired
+//    private RestTemplate clienteRest;
+//
+//    @Override
+//    public List<Juegos> getJuegoByBiblioteca(String biblioteca) {
+//        var url = String.format("http://localhost:8001/juegos/%s", biblioteca);
+//
+//        var response = clienteRest.exchange(url, HttpMethod.GET,
+//                null,
+//                new ParameterizedTypeReference<List<Juegos>>() {
+//                });
+//
+//        return Objects.requireNonNull(response.getBody());
+//    }
 }
