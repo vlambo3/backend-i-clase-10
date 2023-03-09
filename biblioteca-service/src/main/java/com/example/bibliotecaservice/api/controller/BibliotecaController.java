@@ -1,10 +1,8 @@
 package com.example.bibliotecaservice.api.controller;
 
 import com.example.bibliotecaservice.api.client.IJuegosServiceClient;
-import com.example.bibliotecaservice.api.service.BibliotecaService;
 import com.example.bibliotecaservice.domain.model.Juegos;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +15,6 @@ import java.util.List;
 @RequestMapping("/biblioteca")
 @RestController
 public class BibliotecaController {
-
 
     private final IJuegosServiceClient iJuegosServiceClient;
 
