@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "juegos-service")
+@FeignClient(name = "juego-service")
 public interface IJuegosServiceClient {
 
     @GetMapping("/juegos/{biblioteca}")

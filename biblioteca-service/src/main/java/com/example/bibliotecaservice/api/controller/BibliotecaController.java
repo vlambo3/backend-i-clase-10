@@ -14,11 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RequiredArgsConstructor
+@RequestMapping("/biblioteca")
 @RestController
 public class BibliotecaController {
 
-    @Autowired
-    private IJuegosServiceClient iJuegosServiceClient;
+
+    private final IJuegosServiceClient iJuegosServiceClient;
 
     @GetMapping("/{biblioteca}")
     ResponseEntity<List<Juegos>> getBiblioteca(@PathVariable String biblioteca) {

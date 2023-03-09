@@ -1,5 +1,5 @@
 spring:
   application:
-    name: juegos-service
+    name: juego-service
   config:
     import: configserver:http://localhost:8888
