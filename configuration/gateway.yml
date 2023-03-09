@@ -9,13 +9,7 @@ spring:
       discovery:
         locator:
           enabled: true
-#      default-filters:
-#        - name: FilterCustom
       routes:
-        - id: msjuego
-          uri: lb://juegos-service
-          predicates:
-            - Path=/juegos/**
         - id: msbiblioteca
           uri: lb://biblioteca-service
           predicates:
